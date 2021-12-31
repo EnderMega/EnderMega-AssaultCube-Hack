@@ -13,8 +13,8 @@ Granadas = **F6**
 
 **/\*Munições\*/**
 
-Munição primária = **F1**  
-Munição primária Pente = **F2**  
+Munição primária = **F1** (Sniper)  
+Munição primária Pente = **F2** (Sniper)  
 Munição secundária = **F3**  
 Munição secundária Pente = **F4**  
 
