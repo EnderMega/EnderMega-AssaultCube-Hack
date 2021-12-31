@@ -12,7 +12,7 @@ typedef unsigned long long* uinptr;
 typedef unsigned int* uintptr;
 #endif
 
-typedef void* voidptr;
+typedef void* voidptr;	// Escrever "voidptr" é maior do que "void*", mas sei lá kkk
 
 #define TAMMATRIZ(matriz) (sizeof matriz / sizeof matriz[0])
 #define QUAD(x) (x*x)
