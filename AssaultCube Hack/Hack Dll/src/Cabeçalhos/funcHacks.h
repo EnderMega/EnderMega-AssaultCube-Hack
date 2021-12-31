@@ -1,8 +1,8 @@
 #pragma once
 
-// É inline pois eu só uso uma vez
+// Ã‰ inline pois eu sÃ³ uso uma vez
 
-inline static void InfinitoQualquerCoisa(uintptr QualquerCoisa, uint valor)
+static void InfinitoQualquerCoisa(uintptr QualquerCoisa, uint valor)
 {
 	*QualquerCoisa = valor;
 }
@@ -19,7 +19,7 @@ inline static void funcAimBot(Jogadores Entidades[], Jogadores* MeuJogador)
 	float tempHip[2] = { 0, 0 };	// hip horizontal, hip vertical
 	float tempDifVec3[3] = { 0, 0, 0 };
 
-	// Algorítimo de melhor alvo
+	// AlgorÃ­timo de melhor alvo
 	for (ushort i = 1; i < Geral::Num_Jogadores; i++)
 	{
 		if (*(Entidades[i].PegptrVida()) < 0 || *(Entidades[i].PegptrVida()) > 100)
