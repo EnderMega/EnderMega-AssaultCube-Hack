@@ -22,7 +22,7 @@ typedef void* voidptr;
 
 namespace MeuMat {
 
-	// § Extra
+	// Â§ Extra
 
 	template <typename T>
 	static inline uint TamMatriz(T& matriz)
@@ -30,22 +30,20 @@ namespace MeuMat {
 		return sizeof matriz / sizeof matriz[0];
 	}
 
-	// § Aritimética
+	// Â§ AritimÃ©tica
 
-	// Deixe porque é mais rápido do que usar Pot() e eu acho mais limpo do que x * x
 	template<typename T>
 	static inline T Quad(T quad)
 	{
 		return quad * quad;
 	}
 
-	// Como eu sou burro e não achei na internet, se usar negativos vai retornar '-1'
 	template <typename T>
 	static T Pot(T base, int exp)
 	{
 		// Para casos negativos
 		if (base < 0 || exp < 0)
-			return -1;	// Sei lá como lidar com erros, então retorna '-1' e boa kkk
+			return -1;
 
 		switch (base)
 		{
@@ -67,19 +65,17 @@ namespace MeuMat {
 
 		//exp -= 1;
 
-		for (uint i = 1; i < exp; i++)	// i começa em 1 para remover a linha exp -= 1;
+		for (uint i = 1; i < exp; i++)	// i comeÃ§a em 1 para remover a linha exp -= 1;
 			Resultado *= base;
 
 		return Resultado;
 	}
 
-	// Sobrecarga para float, pois não pode ter caso switch para float
-	// Como eu sou burro e não achei na internet, se usar negativos vai retornar '-1'
 	static float Pot(float base, int exp)
 	{
 		// Para casos negativos
-		if (base || exp < 0)	// Testar se posso isso ou se tem que ser if  (base < 0 || exp < 0)
-			return -1;	// Sei lá como lidar com erros, então retorna '-1' e boa kkk
+		if (base < 0 || exp < 0)
+			return -1;
 
 		if (exp == 0)
 			return 1;
@@ -92,19 +88,17 @@ namespace MeuMat {
 
 		//exp -= 1;
 
-		for (int i = 1; i < exp; i++)	// i começa em 1 para remover a linha exp -= 1;
+		for (int i = 1; i < exp; i++)	// i comeÃ§a em 1 para remover a linha exp -= 1;
 			Resultado *= base;
 
 		return Resultado;
 	}
 	
-	// Sobrecarga para double, pois não pode ter caso switch para double
-	// Como eu sou burro e não achei na internet, se usar negativos vai retornar '-1'
 	static double Pot(double base, int exp)
 	{
 		// Para casos negativos
-		if (base || exp < 0)	// Testar se posso isso ou se tem que ser if  (base < 0 || exp < 0)
-			return -1;	// Sei lá como lidar com erros, então retorna '-1' e boa kkk
+		if (base < 0 || exp < 0)
+			return -1;
 
 		if (exp == 0)
 			return 1;
@@ -117,7 +111,7 @@ namespace MeuMat {
 
 		//exp -= 1;
 
-		for (int i = 1; i < exp; i++)	// i começa em 1 para remover a linha exp -= 1;
+		for (int i = 1; i < exp; i++)	// i comeÃ§a em 1 para remover a linha exp -= 1;
 			Resultado *= base;
 
 		return Resultado;
@@ -135,7 +129,7 @@ namespace MeuMat {
 	}
 
 
-	// § Trigonometria
+	// Â§ Trigonometria
 
 	// Calcula a hipotenusa
 	template<typename T>
