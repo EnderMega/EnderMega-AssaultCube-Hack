@@ -1,6 +1,8 @@
 # EnderMega-AssaultCube-Hack
 Um Hack para o AssaultCube, por enquanto é só um aimbot, mas espero melhorar ele.
 
+**!EU NÃO INCENTIVO O USO DE HACK PARA JOGOS, O OBJETIVO DESSE HACK É DE APENAS APRENDIZADO E TALVEZ HvH, NÃO ESTRAGUE A DIVERSÃO DOS OUTROS!**
+
 ## AssaultCube Hack
 Esse é o primeiro hack que eu fiz, ele é bem ruim, mas eu _tô_ feliz com ele
 
