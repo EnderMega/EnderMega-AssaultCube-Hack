@@ -1,7 +1,5 @@
 #pragma once
 
-// É inline pois eu só uso uma vez
-
 static void InfinitoQualquerCoisa(uintptr QualquerCoisa, uint valor)
 {
 	*QualquerCoisa = valor;
