@@ -4,9 +4,9 @@
 int main()
 {
 #if _DEBUG
-	const char* CaminDll = "C:\\projcpp\\AssaultCube Hack\\bin\\Debug\\HackDll.dll";
+	const char* CaminDll = "C:\\projcpp\\AssaultCube Hack\\bin\\Debug\\HackDll.dll";	// Caminho da .dll, deve mudar caso você use uma pasta diferente
 #else
-	const char* CaminDll = "C:\\projcpp\\AssaultCube Hack\\bin\\Release\\HackDll.dll";
+	const char* CaminDll = "C:\\projcpp\\AssaultCube Hack\\bin\\Release\\HackDll.dll";	// Caminho da .dll, deve mudar caso você use uma pasta diferente
 #endif
 
 	HWND Processo = FindWindowA(NULL, "AssaultCube");
@@ -36,7 +36,7 @@ int main()
 				std::cout << "Hack Dll.dll injetada!\n";
 			else
 			{
-				std::cout << "Dll n�o injetada!\n";
+				std::cout << "Dll não injetada!\n";
 				std::cin.get();
 				return EXIT_FAILURE;
 			}
