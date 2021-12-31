@@ -1,9 +1,9 @@
-// A ordem È importante
+// A ordem √© importante
 #include "pch.h"
-#include "CabeÁalhos/MeuMat.hpp"
-#include "CabeÁalhos/Dados.h"
+#include "Cabe√ßalhos/MeuMat.hpp"
+#include "Cabe√ßalhos/Dados.h"
 #include "Classes/Jogadores.h"
-#include "CabeÁalhos/funcHacks.h"
+#include "Cabe√ßalhos/funcHacks.h"
 
 #define DESREF(x) *(uintptr)(x)
 
@@ -21,12 +21,10 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 	WriteConsoleA(hConsole, "Um hack bem meh de EnderMega :D\n", strlen("Um hack bem meh de EnderMega :D\n"), &dwBytesEscritos, nullptr);
 
 	uint EndrMod_ac_client = (uint)GetModuleHandleA("ac_client.exe");
-	//uintptr_t EndrMod_serverdll = (uintptr_t)GetModuleHandleA("xxx.dll");
-	//uintptr_t EndrMod_xxxdll = (uintptr_t)GetModuleHandleA("xxx.dll");
 
 	/*-------------------------------------------------------------------*/
 	
-	// Se eu criar no heap, eu posso usar uma vari·vel em vez de uma constante e assim posso criar durante "runtime"
+	// Se eu criar no heap, eu posso usar uma vari√°vel em vez de uma constante e assim posso criar durante "runtime"
 	Jogadores Entidades[32];
 
 	{
@@ -53,8 +51,8 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 
 		for (auto i : OffSets::Jogador_OffSetMatriz)
 		{
-			ptrBase_Jogador = DESREF(ptrBase_Jogador);	// antes era *(uint*)*ptrNewBase_Jogador; 3 simbolos de ponteiros kkk
-			ptrBase_Jogador += i;		// O valor 'i' j· È o prÛximo valor na matriz
+			ptrBase_Jogador = DESREF(ptrBase_Jogador);
+			ptrBase_Jogador += i;
 		}
 
 		/*-------------------------------------------------------------------*/
@@ -67,7 +65,7 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 	// while (!(GetAsyncKeyState(TECLA_END) & 1))
 	while (true)
 	{
-		/*EST¡TUS*/
+		/*EST√ÅTUS*/
 
 		// Vida
 		if (GetAsyncKeyState(VK_F7) & 1)
@@ -116,9 +114,9 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 			}
 		}
 
-		/*MUNI«’ES*/
+		/*MUNI√á√ïES*/
 
-		// MuniÁ„o prim·ria
+		// Muni√ß√£o prim√°ria
 		if (GetAsyncKeyState(VK_F1) & 1)
 		{
 			Hax::MunicaoPrimaria = !Hax::MunicaoPrimaria;
@@ -133,7 +131,7 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 			}
 		}
 
-		// MuniÁ„o prim·ria Pente		
+		// Muni√ß√£o prim√°ria Pente		
 		if (GetAsyncKeyState(VK_F2) & 1)
 		{
 			Hax::MunicaoPrimariaPente = !Hax::MunicaoPrimariaPente;
@@ -148,7 +146,7 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 			}
 		}
 
-		// MuniÁ„o secund·ria
+		// Muni√ß√£o secund√°ria
 		if (GetAsyncKeyState(VK_F3) & 1)
 		{
 			Hax::MunicaoSecundaria = !Hax::MunicaoSecundaria;
@@ -163,7 +161,7 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 			}
 		}
 
-		// MuniÁ„o secund·ria Pente
+		// Muni√ß√£o secund√°ria Pente
 		if (GetAsyncKeyState(VK_F4) & 1)
 		{
 			Hax::MunicaoSecundariaPente = !Hax::MunicaoSecundariaPente;
@@ -212,10 +210,10 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 
 		/*-------------------------------------------------------------------*/
 
-		/*EST¡TUS*/
+		/*EST√ÅTUS*/
 
-		if (Hax::GodMode)											// Eu n„o sei se eu estou copiando ou se eu estou passando o ponteiro da matriz
-			InfinitoQualquerCoisa(Entidades[0].PegptrVida(), 1337);	// mas acho que eu estou mandando um valor e n„o uma vari·vel
+		if (Hax::GodMode)						// Eu n√£o sei se eu estou copiando ou se eu estou passando o ponteiro da matriz
+			InfinitoQualquerCoisa(Entidades[0].PegptrVida(), 1337);	// mas acho que eu estou mandando um valor e n√£o uma vari√°vel
 																
 		if (Hax::Armadura)
 			InfinitoQualquerCoisa(Entidades[0].PegptrArm(), 1337);
@@ -225,10 +223,10 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 		if (Hax::Granada)
 			InfinitoQualquerCoisa(Entidades[0].PegptrGranada(), 3);
 
-		/*MUNI«’ES*/
+		/*MUNI√á√ïES*/
 		
-		// Tem um problema com sniper e rifle, mas fora isso, de boa; Esse hack nem È grande coisa
-		// pois, pela maior parte, n„o d· pra usar em multiplayer
+		// Tem um problema com sniper e rifle, mas fora isso, de boa; Esse hack nem √© grande coisa
+		// pois, pela maior parte, n√£o d√° pra usar em multiplayer
 		if (Hax::MunicaoPrimaria)
 			InfinitoQualquerCoisa(Entidades[0].PegptrMunicaoPrimaria(), 1337);
 
@@ -265,14 +263,14 @@ DWORD WINAPI ThreadPrincipal(HMODULE hModulo)
 
 		/*HAX*/
 
-		if (Hax::Aimbot)						// AÁıes do Aimbot
+		if (Hax::Aimbot)						// A√ß√µes do Aimbot
 			funcAimBot(Entidades, MeuJogador);
 
 		if (GetAsyncKeyState(VK_END) & 1)	// Para sair do hack
 			break;
 	}
 
-	// FinalizaÁ„o
+	// Finaliza√ß√£o
 
 	CloseHandle(hConsole);
 	FreeConsole();
